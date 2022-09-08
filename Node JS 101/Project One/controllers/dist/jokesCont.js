@@ -37,14 +37,16 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
 };
 exports.__esModule = true;
 exports.getJokeThree = exports.getJokeTwo = exports.getJokeOne = void 0;
+var jokesRoutes_1 = require("../routes/jokesRoutes");
 function getJokeOne(req, res) {
     return __awaiter(this, void 0, void 0, function () {
         return __generator(this, function (_a) {
             try {
                 console.log('thtth');
-                res["return"]('joke one');
+                res.send('blue waffle');
             }
             catch (error) {
+                console.error(error);
             }
             return [2 /*return*/];
         });
@@ -77,3 +79,4 @@ function getJokeThree(req, res) {
     });
 }
 exports.getJokeThree = getJokeThree;
+exports["default"] = jokesRoutes_1["default"];

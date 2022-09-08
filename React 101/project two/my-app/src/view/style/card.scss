@@ -1,0 +1,31 @@
+$bordercolor:black;
+
+
+.newCard{
+    background-color: orange;
+    border-color: $bordercolor;
+    color: $textcolor;
+    border-radius: 30px;
+    padding: 0px;
+    margin: 15px;
+    position: relative;
+    height: 500px;
+    img{
+        width: 100%;
+        height: 100%;
+        border-radius: 30px;
+        z-index: 1;
+    }
+    h2, h4{
+        z-index: 2;
+        position:absolute;
+    }
+    h4{
+        bottom: 10px;
+        color: black;
+    }
+    h4:hover{
+        color:red
+    }
+
+}

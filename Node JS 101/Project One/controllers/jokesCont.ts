@@ -1,9 +1,12 @@
+import router from "../routes/jokesRoutes"
+
 export async function getJokeOne (req:any, res:any){
     try {
+
         console.log('thtth')
-        res.return('joke one')
+        res.send('blue waffle')
     } catch (error) {
-        
+        console.error(error)
     }
 }
 
@@ -22,3 +25,5 @@ export async function getJokeThree (req:any, res:any){
         
     }
 }
+
+export default router

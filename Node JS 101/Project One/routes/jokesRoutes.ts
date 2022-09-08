@@ -3,7 +3,7 @@ import { getJokeOne, getJokeTwo, getJokeThree } from "../controllers/jokesCont"
 const router = express.Router()
 
 router
-.get('/jokeone', getJokeOne )
+.post('/jokeone', getJokeOne )
 .get('/joketwo', getJokeTwo)
 .get('/jokethree', getJokeThree)
 

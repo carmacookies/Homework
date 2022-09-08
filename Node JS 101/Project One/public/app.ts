@@ -1,16 +1,14 @@
-async function handleJokeOne(){
+async function handleJokeOne(event){
     try {
         //@ts-ignore
-        const { data } = await axios.get('/jokes/jokeone')
-        //const { joke } = data
-        console.log(data)
-        //renderJoke(joke)
+        const { data } = await axios.post('/jokes/jokeone')
+        renderJoke(data)
     } catch (error) {
         console.error(error);
     }
 }
 
-async function renderJoke(joke){
-    const root = document.querySelector('.root')
-    root.innerHTML = `<div>${joke}</div>`
+function renderJoke(joke: any){
+    const root=document.querySelector(".root")
+    root.innerHTML=`<div>${joke}</div>`
 }
