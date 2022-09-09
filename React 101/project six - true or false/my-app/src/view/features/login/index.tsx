@@ -46,7 +46,7 @@ const [error, setError] = useState<string | null>(null);
                 </form>
     
                 <button  type="submit">login</button>
-              
+                <Link  to="/game">Play The Game</Link>
             </div>
         )
     }
