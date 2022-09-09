@@ -1,0 +1,37 @@
+.secretCard{
+    background-color: orange;
+    z-index: 0;
+    border: wheat;
+    border-radius: 20px;
+    border-width: 5px;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    padding: 20px;
+    border-style:solid;
+}
+.card{
+    background-color: orange;
+    z-index: 1;
+    border: wheat;
+    border-radius: 20px;
+    border-width: 5px;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    padding: 20px;
+    border-style:solid;
+    margin: 10px;
+    width: 300px;
+    flex-wrap: wrap;
+}
+.rapper{
+    display: flex;
+    flex-wrap: wrap;
+}
+.none{
+    display: none;
+}
+.invisibleDiv{
+    display: none;
+}
