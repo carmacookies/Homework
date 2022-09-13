@@ -7,7 +7,7 @@ import Home from "./view/home/Home"
 import Collection from "./view/home/Collection"
 import Cart from "./view/cart/Cart"
 import NewProduct from "./view/newPiece/newProduct/NewProduct"
-import Piece from "./view/piece/Piece"
+import PiecePage from "./view/piece/Piece"
 
 function App() {
   return (
@@ -23,7 +23,7 @@ function App() {
           <Route path='newProduct' element={<NewProduct />} />
         </Route>
         
-        <Route path= 'piece/:pieceId' element= {<Piece/>}></Route>
+        <Route path= 'piece/:pieceId' element= {<PiecePage/>}></Route>
       </Routes>
     </BrowserRouter>
       </header>

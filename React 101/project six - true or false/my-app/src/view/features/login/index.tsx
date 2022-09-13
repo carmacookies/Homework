@@ -43,10 +43,10 @@ const [error, setError] = useState<string | null>(null);
                 <form onSubmit={handleLogin}>
                     <input type="email" name="email" placeholder="email" />
                     <input type="password" name="password" placeholder="password" />
+                    
+                <button  type="submit">login</button>
                 </form>
     
-                <button  type="submit">login</button>
-                <Link  to="/game">Play The Game</Link>
             </div>
         )
     }

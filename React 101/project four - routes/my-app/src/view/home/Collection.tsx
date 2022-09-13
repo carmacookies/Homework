@@ -17,23 +17,13 @@ export const goodData:Piece[] = [
   {id:"247375501",name:"Buff Doge vs. Cheems",url:"https:\/\/i.imgflip.com\/43a45p.png"},
   {id:"222403160",name:"Bernie I Am Once Again Asking For Your Support",url:"https:\/\/i.imgflip.com\/3oevdk.jpg"}
 ]
+ 
 function Collection() {
-//   const [goodData, setGoodData] = useState([])
-//  
-  // async function renderCollection() {
-  //   const gData = getCollection()
-  //   setGoodData(gData)
-  // }
-  //  useEffect(() => {
-  //   goodData.map((piece:Piece) =>{
-  //     return <Link to= `collection/ ${piece.id}`>
-        // <div className="link">piece.name</div>{" "}
-        // </Link>
-  //   })
-  //  });
+  
   return (
     <div>
       <h3>These Are All The Pieces In Our Collection</h3>
+      
       {goodData.map((piece:Piece) =>{
         return <Link to= {`piece/${piece.id}`} key={piece.id}>{piece.name}  </Link>
       })}

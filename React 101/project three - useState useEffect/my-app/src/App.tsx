@@ -3,9 +3,6 @@ import './view/style/app.scss';
 import axios from 'axios';
 import {useState, useEffect} from "react"
 
-
-
-
 function App() {
   const [color, setColor] = useState('')
   function getRandomColor(){
@@ -15,13 +12,14 @@ function App() {
     setColor(newBackgroundColor)
   }
   
+  const [elephant, setElephant] = useState('')
   async function handleGetElephant(){
     //@ts-ignore
       const { data } = await axios.get('https://catfact.ninja/fact')
       const {fact} = data
       if(!fact) throw new Error('no facts')
       console.log(fact)
-      
+      setElephant(fact)
     }
   
   
@@ -34,6 +32,9 @@ function App() {
       backgroundColor: color
     }}>
       <button onClick={handleGetElephant}>elephant</button>
+      <div>
+        {elephant}
+      </div>
       <button onClick={getRandomColor}>change color</button>
 
      
