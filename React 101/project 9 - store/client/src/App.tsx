@@ -4,7 +4,7 @@ import {
   Routes,
   Route,
 } from "react-router-dom";
-import './App.css';
+import './app.scss'
  
 import { AdminPage } from './features/admin/adminPage';
 
