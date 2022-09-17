@@ -1,4 +1,3 @@
-
 import express from "express";
 import mongoose from "mongoose";
 const app = express();
@@ -23,6 +22,12 @@ mongoose
 
 import productRouter from "./API/Products/productRouter"
 app.use('/api/products', productRouter)
+
+import userCartRouter from "./API/UsersCarts/userCartRoutes"
+app.use('/api/usersCarts', userCartRouter)
+
+import adminsRouter from "./API/Admins/adminRouter"
+app.use('/api/admins', adminsRouter)
 
 app.listen(port, () => {
   return console.log(`Server is listening at http://localhost:${port}`);
