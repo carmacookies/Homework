@@ -60,6 +60,7 @@ export function myDish(req, res){
   connection.query(query, (err, result) => {
     try {
       if (err) throw err;
+      console.log(result)
       res.send(result)
     }
     catch (error) {

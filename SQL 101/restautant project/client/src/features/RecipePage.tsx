@@ -10,7 +10,11 @@ export interface User{
   user_name:string;
   user_job:string;
 }
-export async function getUserByCookie(){
+
+  
+const RecipePage = () =>{
+  const [loggedinUser, setLoggedinUser] = useState<User>()
+  async function getUserByCookie(){
     try{
       const { data } = await axios.get("/api/users/getUserByCookies");
       if (!data) throw new Error('data not found')
@@ -18,25 +22,17 @@ export async function getUserByCookie(){
       if(!user){
           throw new Error('User not found');
       }
+      setLoggedinUser( user)
       return (user)
     }
     catch (error) {
         console.error(error)
     }
   }
-  
-const RecipePage = () =>{
-    const [loggedinUser, setLoggedinUser] = useState<User>()
-    
-    const user = getUserByCookie()
-    async function setUser(){
-      console.log(user)
-      setLoggedinUser(await user)
-      console.log(loggedinUser)
-    }
     useEffect(() => {
-      setUser()
+      getUserByCookie()
     }, [])
+    console.log(loggedinUser)
     return (
         <div>
             <h1>Recipe Page</h1>

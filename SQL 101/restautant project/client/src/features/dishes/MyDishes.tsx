@@ -2,7 +2,6 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react'
 import { DishCard } from './DishCard';
 import Dish from './dish'
-import { getUserByCookie, User } from '../RecipePage';
 
 interface myDishProps{
     loggedinUser:any
@@ -13,7 +12,6 @@ const MyDishes = ({loggedinUser}:myDishProps) => {
   async function getMyDishes(){
     try{
         const response = await axios.post('/api/dishes/myDishes', {loggedinUser})
-        console.log(response.data);
         setMyDishes(response.data)
       
     } catch (error) {
@@ -23,6 +21,7 @@ const MyDishes = ({loggedinUser}:myDishProps) => {
   useEffect(() => {
     getMyDishes()
   }, [])
+  console.log(myDishes)
   return (
     <div>
     <h2> My Dishes</h2>
