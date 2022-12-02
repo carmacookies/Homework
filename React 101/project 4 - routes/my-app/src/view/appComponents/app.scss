@@ -40,4 +40,12 @@
       transform: rotate(360deg);
     }
   }
-  
+  .collection{
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+  }
+  .pieceCard{
+    display:  flex;
+  }

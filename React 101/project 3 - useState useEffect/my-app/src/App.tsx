@@ -12,28 +12,28 @@ function App() {
     setColor(newBackgroundColor)
   }
   
-  const [elephant, setElephant] = useState('')
-  async function handleGetElephant(){
+  const [catFact, setCatFact] = useState('')
+  async function handleGetCatFact(){
     //@ts-ignore
       const { data } = await axios.get('https://catfact.ninja/fact')
       const {fact} = data
       if(!fact) throw new Error('no facts')
       console.log(fact)
-      setElephant(fact)
+      setCatFact(fact)
     }
   
   
   useEffect(()=>{
-    handleGetElephant()
+    handleGetCatFact()
   },[color])
   return (
     <div className="App" >
       <header className="App-header" style={{
       backgroundColor: color
     }}>
-      <button onClick={handleGetElephant}>elephant</button>
+      <button onClick={handleGetCatFact}>get a cat fact</button>
       <div>
-        {elephant}
+        {catFact}
       </div>
       <button onClick={getRandomColor}>change color</button>
 

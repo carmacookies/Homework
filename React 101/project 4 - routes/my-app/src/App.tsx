@@ -7,7 +7,7 @@ import Home from "./view/home/Home"
 import Collection from "./view/home/Collection"
 import Cart from "./view/cart/Cart"
 import NewProduct from "./view/newPiece/newProduct/NewProduct"
-import PiecePage from "./view/piece/Piece"
+import { PiecePage } from './view/appComponents/PiecePage';
 
 function App() {
   return (
